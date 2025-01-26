@@ -1,0 +1,49 @@
+Question n. 0.0: A lecture on machine learning for healthcare focuses on medical image analysis.  The lecture covers various image analysis problems and techniques, including segmentation methods which aim to divide images into regions of similar attributes.  One such method utilizes "superpixels," which are described as visually homogeneous image regions created by partitioning an image into 'N' regions. What is a key characteristic of superpixels that makes them computationally efficient?
+A: Superpixels use Markov Random Fields to reduce computational complexity.
+B: Superpixels utilize k-Nearest Neighbors (kNN) clustering for efficient processing.
+C: Superpixels reduce the complexity of images by representing hundreds of thousands (or millions) of pixels with only a few hundred (or thousand) superpixels.
+D: Superpixels leverage convolutional neural networks to simplify image representation.
+Correct Answer: C
+
+Question n. 1.0: The Simple Linear Iterative Clustering (SLIC) algorithm uses which of the following techniques to initially divide an image before refining clusters using the k-means Lloyd algorithm?
+A: A hierarchical clustering approach, recursively dividing the image into smaller regions.
+B: A random sampling approach, selecting pixel clusters at random for initial centroid assignment.
+C: A grid-based approach, dividing the image into tiles of a specified size.
+D: A region-growing approach, starting from seed pixels and expanding regions based on similarity.
+Correct Answer: C
+
+Question n. 1.1: The Simple Linear Iterative Clustering (SLIC) algorithm, used in image segmentation, employs a regularizer parameter (R) and a region size parameter (RS).  The image is initially divided into a grid, and k-means clustering is applied.  How does the regularizer parameter impact the SLIC algorithm's output, given the relationship R/RS in the feature w(x,y)?
+A: The regularizer (R) is inversely proportional to the region size (RS), leading to smaller superpixels when R is large.
+B: The regularizer (R) controls the balance between the visual appearance of clusters and their spatial consistency.
+C: The regularizer (R) solely affects the speed of the k-means clustering process.
+D: The regularizer (R) directly determines the number of superpixels generated.
+Correct Answer: B
+
+Question n. 3.0: Convolutional Neural Networks (CNNs) consist of several layer types working together.  One layer type reduces the representation size from the previous layer, decreases the number of parameters, and helps control overfitting.  Another layer type has full connections to all outputs from the previous layer and is typically used as the final layer(s) in a CNN.  A third layer type involves filters that are applied across the input to extract features.  Which of the following correctly identifies these three layer types, in the order presented above?
+A: Pooling layers, Convolutional layers, Fully-connected layers
+B: Convolutional layers, Pooling layers, Fully-connected layers
+C: Fully-connected layers, Convolutional layers, Pooling layers
+D: Pooling layers, Fully-connected layers, Convolutional layers
+Correct Answer: D
+
+Question n. 4.0: A researcher is developing a system for clinical-grade decision support in pathology.  The system analyzes whole-slide images (WSIs) to identify the presence of tumors and highlight their locations. Which of the following is a key feature of this proposed system, as described?
+A: The system is limited to analyzing images at a single resolution, preventing detailed examination of cellular structures.
+B: The system requires extensive manual annotation of training data to achieve high accuracy.
+C: The system utilizes a method that does not require manual annotations of the WSI, improving efficiency and scalability.
+D: The system relies heavily on traditional neural networks due to their superior performance in image analysis.
+Correct Answer: C
+
+Question n. 5.0: A new clinical-grade decision support system for computational pathology was developed.  Which of the following advancements is NOT explicitly mentioned as a key feature of this system?
+A: The system defines clinical relevance for computational pathology by establishing metrics based on dermatologist assessments.
+B: The system successfully integrates into existing clinical workflows, potentially decreasing pathologist workload.
+C: The system utilizes significantly larger datasets than previous studies, improving its ability to generalize to real-world pathology data.
+D: The system uses a novel deep learning model for image segmentation that requires extensive manual annotation of training data to achieve high accuracy.
+Correct Answer: D
+
+Question n. 5.1: A new clinical-grade decision support system for computational pathology was developed.  The system utilizes deep learning,  achieves high accuracy (AUC of 0.989 for an ensemble model in prostate cancer analysis), and aims for improved integration into clinical workflows. Which of the following is a key feature highlighted in the system's development?
+A: The system was designed to significantly reduce the workload for pathologists by approximately 75%, as indicated by analysis of slides reviewed.
+B: The system requires extensive manual annotations for accurate analysis.
+C: The system exclusively uses small, previously established datasets for model training.
+D: The system's generalization to real-world pathology practice was poor, limiting its clinical applicability.
+Correct Answer: A
+

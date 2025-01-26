@@ -1,0 +1,58 @@
+[
+    {
+        "question": "A lecture on medical image analysis describes superpixels as a technique used in image segmentation.  Considering that medical images often consist of hundreds of thousands or millions of pixels, what key advantage do superpixels offer?",
+        "correct_answer": "Superpixels significantly reduce computational complexity by representing images with far fewer units than pixels, while still preserving most image structures.",
+        "correct_explanation": "This option is correct. The lecture notes explicitly state that superpixels are computationally efficient, reducing the number of units to be processed from hundreds of thousands or millions of pixels to only a few hundred or thousand superpixels. They also note that most image structures are conserved, meaning there is minimal information loss.",
+        "distractor1": "Superpixels improve the accuracy of image classification by focusing on individual pixels.",
+        "distractor1_explanation": "This option is incorrect. While superpixels can indirectly aid image classification, their primary advantage does not lie in improving classification accuracy directly but rather in computational efficiency.  The text explains that superpixels improve efficiency without a major loss of information.",
+        "distractor2": "Superpixels increase the resolution of images, leading to finer details and more precise segmentation.",
+        "distractor2_explanation": "This option is incorrect. Superpixels do not increase the resolution of the image. Resolution refers to the number of pixels, and the superpixel technique reduces the number of units to process. The increased efficiency doesn't enhance resolution.",
+        "distractor3": "Superpixels introduce temporal information to static images, enabling analysis of changes over time.",
+        "distractor3_explanation": "This option is incorrect.  Superpixels are a spatial technique that works on static images and do not introduce temporal information (information about changes over time).  The addition of temporal data would require other methods.",
+        "index": 0
+    },
+    {
+        "question": "The Simple Linear Iterative Clustering (SLIC) algorithm, used for image segmentation, utilizes a regularizer parameter (R) and a region size parameter (RS).  The algorithm begins by dividing an image into a grid based on which parameter, and then refines the resulting clusters using the k-means Lloyd algorithm?  Additionally, what optional step follows the k-means process in SLIC?",
+        "correct_answer": "The algorithm first divides the image into a grid based on the region size (RS) parameter, and then optionally removes segments smaller than a threshold by merging them.",
+        "correct_explanation": "This option correctly identifies that the initial grid division in SLIC is based on the region size (RS) parameter, as explicitly stated in the provided text.  It also accurately describes the optional removal of small segments by merging them.",
+        "distractor1": "The algorithm first divides the image into a grid based on the regularizer (R) parameter, and then optionally removes segments smaller than a threshold by merging them.",
+        "distractor1_explanation": "This option incorrectly states that the initial grid division is based on the regularizer (R) parameter. The text clearly states that the initial grid is determined by the region size (RS). While the regularizer impacts the clustering refinement, it does not determine the initial grid structure.  The optional merging of small segments is correctly stated.",
+        "distractor2": "The algorithm first divides the image into a grid based on the regularizer (R) parameter, and then optionally increases the size of segments smaller than a threshold.",
+        "distractor2_explanation": "This option correctly identifies the optional step of modifying segment size, but incorrectly attributes the initial grid division to the regularizer (R) parameter.",
+        "distractor3": "The algorithm first divides the image into a grid based on the region size (RS) parameter, and then optionally increases the size of segments smaller than a threshold.",
+        "distractor3_explanation": "This option incorrectly uses the regularizer (R) as the basis for initial grid division, and incorrectly describes the optional step. Instead of removing small segments, it describes increasing their size.",
+        "index": 1
+    },
+    {
+        "error": "Input text does not have the expected number of lines.",
+        "index": 2
+    },
+    {
+        "question": "Convolutional Neural Networks (CNNs) consist of several layer types working together.  One layer type reduces the representation size from the previous layer, decreases the number of parameters, and helps control overfitting. Another layer type has full connections to all outputs from the previous layer and is often used as the final layer(s) in a CNN.  A third layer type involves applying filters to extract features. Which of the following correctly identifies these three layer types, respectively?",
+        "correct_answer": "Pooling layer, Fully-connected layer, Convolutional layer",
+        "correct_explanation": "This option correctly identifies the three layer types and their described functions. Pooling layers reduce representation size and parameters, controlling overfitting. Fully-connected layers connect to all previous outputs and are often final layers. Convolutional layers apply filters to extract features.",
+        "distractor1": "Fully-connected layer, Convolutional layer, Pooling layer",
+        "distractor1_explanation": "This option incorrectly orders the layer types and their functions.  While all three layer types are part of CNNs, the descriptions don't match the order presented.",
+        "distractor2": "Convolutional layer, Pooling layer, Fully-connected layer",
+        "distractor2_explanation": "This option incorrectly assigns the functions to the layers.  Convolutional layers are not primarily responsible for reducing representation size or controlling overfitting in the way described.",
+        "distractor3": "Pooling layer, Convolutional layer, Fully-connected layer",
+        "distractor3_explanation": "This option incorrectly reverses the first two layer types, mismatching the descriptions of their functions.",
+        "index": 3
+    },
+    {
+        "error": "Input text does not have the expected number of lines.",
+        "index": 4
+    },
+    {
+        "question": "A novel clinical-grade decision support system for computational pathology was developed.  Which of the following features BEST describes a key advancement of this system as presented?",
+        "correct_answer": "The system proposes a method that eliminates the need for manual annotations, allowing for efficient analysis of large datasets.",
+        "correct_explanation": "This option is correct.  The text repeatedly emphasizes the system's novel method of not requiring manual annotations, which is a significant advantage considering the computational pathology field is data rich.  The use of large datasets is also highlighted as a key advantage.  Therefore, this accurately describes the presented system's key advancement.",
+        "distractor1": "The system utilizes a unique method of manual annotation to improve accuracy.",
+        "distractor1_explanation": "This option is incorrect. The text explicitly states that the system proposes a method that *does not* require manual annotations. This contradicts option A.",
+        "distractor2": "The system successfully uses relatively small datasets for analysis, showing improved efficiency.",
+        "distractor2_explanation": "This option is incorrect.  The system, in fact, utilizes much *larger* datasets than previous studies, improving performance and generalization.",
+        "distractor3": "The system's methodology is specifically designed for use in dermatological image analysis only.",
+        "distractor3_explanation": "This option is incorrect. While the system is applied to medical image analysis, the examples provided are broader than just dermatological images and include prostate and melanoma examples. The scope of the system is not limited to dermatology.",
+        "index": 5
+    }
+]

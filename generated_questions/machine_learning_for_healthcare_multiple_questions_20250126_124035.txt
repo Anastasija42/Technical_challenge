@@ -1,0 +1,56 @@
+Question n. 0.0: A lecture on machine learning for healthcare focuses on medical image analysis.  The lecture covers various segmentation techniques and introduces the concept of superpixels, which are described as visually homogeneous image regions created by partitioning an image into 'N' regions.  Which of the following best describes a key characteristic of superpixels, as presented in this lecture?
+A: Superpixels inherently lose significant image detail, resulting in substantial information loss.
+B: Superpixels provide a perceptually meaningful representation by grouping pixels with similar low-level properties.
+C: Superpixels are primarily useful for high-resolution images, and their effectiveness decreases with lower resolutions.
+D: Superpixels are computationally expensive, significantly increasing the complexity of image processing.
+Correct Answer: B
+
+Question n. 1.0: The Simple Linear Iterative Clustering (SLIC) algorithm uses two main input parameters to generate superpixels. One parameter sets the nominal size of the superpixels, and another parameter controls the balance between clustering appearance and spatial regularization.  What is the parameter that regulates the balance between these two aspects, and how is it defined in relation to the nominal size of the superpixels?
+A: Region Size (RS); it is defined as the product of the Regularizer (R) and the number of superpixels (K).
+B: Regularizer (R); it is defined as the ratio of the Region Size (RS) to the number of superpixels (K).
+C: Regularizer (R); it is defined as the ratio of the Region Size (RS) to 1.
+D: Region Size (RS); it is defined as the square root of the Regularizer (R).
+Correct Answer: C
+
+Question n. 1.1: The Simple Linear Iterative Clustering (SLIC) algorithm, used for image segmentation, employs a process that begins by dividing an image into a grid.  A key parameter, the Regularizer (R), influences the balance between appearance-based clustering and spatial regularization.  Considering the algorithm's steps, what is the primary role of the Regularizer (R) in the SLIC algorithm?
+A: It defines the threshold for removing small segments after k-means clustering.
+B: It sets the trade-off between clustering appearance and spatial regularization.
+C: It specifies the distance function used in the k-means clustering process (e.g., Euclidean or Mahalanobis).
+D: It determines the number of superpixels generated.
+Correct Answer: B
+
+Question n. 3.0: Convolutional Neural Networks (CNNs) consist of several layer types.  One layer type downsamples the representation size from the previous layer, reduces the number of parameters, and helps control overfitting. Another layer type has full connections to all outputs from the previous layer and is often used as the final layer(s). A third layer type uses filters to extract features from the input. Which of the following correctly matches the layer types with their descriptions?
+A: Layer 1: Pooling layer, Layer 2: Fully-connected layer, Layer 3: Convolutional layer
+B: Layer 1: Convolutional layer, Layer 2: Pooling layer, Layer 3: Fully-connected layer
+C: Layer 1: Pooling layer, Layer 2: Convolutional layer, Layer 3: Fully-connected layer
+D: Layer 1: Fully-connected layer, Layer 2: Pooling layer, Layer 3: Convolutional layer
+Correct Answer: B
+
+Question n. 4.0: A research project on digital pathology aims to improve cancer diagnosis.  The researchers developed a method that uses whole-slide images (WSIs) and analyzes them to provide a score representing tumor probability and highlight lesion location.  Which of the following is NOT a stated advantage of this new approach?
+A: The method does not require manual annotations.
+B: The method improves generalization to real data in pathology practice.
+C: The method utilizes datasets significantly larger than those used in previous studies.
+D: The method perfectly eliminates all data curation needs.
+Correct Answer: D
+
+Question n. 5.0: A new clinical-grade decision support system for computational pathology was developed.  Which of the following features was NOT a key characteristic of this system as described?
+A: The system utilized significantly larger datasets compared to previous studies.
+B: The system required manual annotation of images for accurate analysis.
+C: The system successfully integrated into existing clinical workflows, aiming to reduce workload.
+D: The system demonstrated improved generalization to real-world pathology data in practice.
+Correct Answer: B
+
+Question n. 5.1: A new clinical-grade decision support system for computational pathology was developed.  Which of the following was NOT a key feature or outcome of this system's development?
+A: The system's integration into existing clinical workflows resulted in a 50% reduction in pathologist workload.
+B: The system demonstrated improved generalization to real-world pathology data encountered in clinical practice.
+C: A method was developed that eliminated the need for manual image annotations.
+D: The system utilized datasets significantly larger than those used in previous studies.
+Correct Answer: A
+
+Question n. 5.2: A new clinical-grade decision support system for computational pathology was developed.  This system utilized significantly larger datasets than previous studies, did not require manual annotations, and aimed to improve the integration into existing clinical workflows.  Which of the following best describes a key advantage of using larger datasets in this context?
+A: Improved generalization to real-world pathology data.
+B: Simplified the process of manual annotation.
+C: Reduced need for deep learning techniques.
+D: Decreased computational processing time.
+Correct Answer: A
+
