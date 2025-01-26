@@ -1,0 +1,204 @@
+{
+    "id": "901e34ae-4f31-4b3b-83a3-0412183496e6_chunk_0",
+    "deck_id": "901e34ae-4f31-4b3b-83a3-0412183496e6",
+    "type": "chunk",
+    "chunk_index": 0,
+    "content": {
+        "text": "ETH zürich\nLecture \"Machine Learning for Healthcare\" (261-5120-00L) Basics of ML for Medical Image Analysis\nJulia Vogt & Valentina Boeva & Gunnar Rätsch Institute for Machine Learning, Computer Science Department\n@gxr @gxrlab #DataScience #PrecisionMedicine #ClinicalData\nLIN\nUniversityHospital Zurich\nBIOMEDICAL INFORMATICS\nDINFK DBIOL\n1\nGunnar Rätsch | 1.3.2022 |\n[PAGE_BREAK]\nETH zürich\nTopics for Today\n· Medical Image Data\n· Typical medical image analysis problems\n· Segmentation\n○ Superpixels\n○ Markov Random Fields\n· Image Classification\n○ Convolutional Neural Networks\n· Application in Digital Pathology\nLIN\n|\nBIOMEDICAL INFORMATICS\n|\n[PAGE_BREAK]\nETH zürich\nAnalysis of Medical Images\nPathology (2d, high resolution)\nRadiology (2d, 3d, low res.)\nUltrasonic (low resolution, temporal)\nMRI CT\n10-\nB\nRetina Fundus 2d high resolution\n|\n|\n[PAGE_BREAK]\nETH zürich\n\"Zoo\" of Image Analysis/Labeling Problems\nGeometry Estimation\nImage Denoising\nObject Segmentation\nDepth Estimation\nJ\nJ\nSky\nBuilding\nTree\nGrass\nINFURIVIAIILS\nGunnar Rätsch | 1.3.2022 | 4\n[PAGE_BREAK]\nETH zürich\nImage Analysis Problems\nNon-complete list of (medical) image analysis problems\n· Image classification (\"normal vs. diseased eye fundus\")\n· Image registration (\"register multiple images of same patient\")\n· Image labeling (\"find cancer cells\")\n· 3d object reconstruction (\"heart model\")\n· Image segmentation (\"identify vasculature\", more next page)\n● ...\nImage analysis is a very broad field with many challenges. It would need its own lecture on that topic. Actually multiple lectures. We can only cover some aspects and only some of the basics.\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022\n| 5\n[PAGE_BREAK]\nETH zürich\nSegmentation in Medical Imaging\n● Determination of the volumes of abdominal solid organs and focal lesions has great potential importance:\n○ Monitoring the response to therapy and the progression of tumors and preoperative examination of living liver donors are the most common clinical applications of volume determination.\n. MRI volumetry of the hippocampus can help distinguish patients with Alzheimer's disease from elderly controls with a high degree of accuracy (80%-90%).\n. In order to be able to detect and quantify vascular diseases one of the first step is the segmentation of the vasculature.\nLIN BIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 6\n[PAGE_BREAK]\nETH zürich\nSegmentation\nSegmentation of an image entails the division or separation of the image into regions of similar attribute.\n. Categorization of different segmentation methods:\n○ Boundary-based: optimum boundary, active boundary, live wire, level sets\n○ Shape Model-based: Manual tracing, live wire, active shape/appearance, M-reps, atlas-based\n○ Region-based: clustering, kNN, CM, FCM, fuzzy connectedness, MRE, graph cut. watershed, optimum partitioning\nLIN\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 7\n[PAGE_BREAK]\nETH zürich\nSuperpixel\n· Algorithms in computer vision use the pixel-grid as the underlying representation.\n. The pixel-grid is not a natural representation of visual scenes, it is rather just an \"artifact\" of a digital imaging process.\n. It would be more natural to work with perceptually meaningful entities obtained from a low-level grouping process.\n. Superpixels are essentially the visually homogeneous regions of an image, that were acquired by partitioning the image into N regions, where the pixels within a region share some low-level property (color, texture etc.)\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022\n| 8\n[PAGE_BREAK]\nETH zürich\nSuperpixels\nSuperpixels images of different superpixels number Ks and different distance functions\n(a) K = 50 (Euclidean distance), (b) K = 100 (Euclidean distance), (c) K = 200 (Euclidean distance), (d) K = 200 (Mahalanobis distance).\nLIN\n(a)\n(b)\n(c)\n(d)\nSource: L. Zhang et. al. An improved method for pancreas segmentation using SLIC and interactive region merging\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 9\n[PAGE_BREAK]\nETH zürich\nSuperpixel properties\n. It is computationally efficient: it reduces the complexity of images from hundreds of thousands (millions) of pixels to only a few hundred (thousand) superpixels.\n. It is also representationally efficient: pairwise constraints between units, while only for adjacent pixels on the pixel-grid, can now model much longer-range interactions between superpixels.\n· The superpixels are perceptually meaningful: each superpixel is a consistent unit, i.e. all pixels in a superpixel are most likely uniform in, color or texture.\n. It is near-complete: since superpixels are results of an over-segmentation, most structures in the image are conserved. There is very little loss in moving from the pixel-grid to the superpixel map.\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022\n| 10\n[PAGE_BREAK]\nETH zürich\nSimple Linear Iterative Clustering [SLIC] Outline\n· SLIC is a simple and efficient method to partition an image in visually homogeneous regions.\n. It is based on a spatially localized version of k-means clustering.\n· Each pixel is associated to a feature vector: (x, y) = [Ax, Ay, I (x, y)] where I(x,y) is the pixel value(s) of the image at the given location, À coefficient balances the spatial and appearance components of the feature vectors, imposing a degree of spatial regularization to the extracted regions.\n. Using these feature vectors k-means clustering is applied and pixels assigned to the same cluster will form a superpixel.\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 11\n[",
+        "summary": "The lecture on Machine Learning for Healthcare at ETH Zürich covers the basics of medical image analysis, including data types, common analysis problems, and segmentation techniques. It discusses the importance of accurate image analysis in pathology and radiology, and introduces concepts such as superpixels and various segmentation methods.",
+        "main_topic": "Machine Learning for Healthcare: Medical Image Analysis",
+        "subtopics": [
+            "Medical Image Data",
+            "Typical Medical Image Analysis Problems",
+            "Segmentation Techniques",
+            "Image Classification",
+            "Application in Digital Pathology",
+            "Geometry Estimation",
+            "Image Denoising",
+            "Object Segmentation",
+            "Depth Estimation",
+            "Image Registration",
+            "Image Labeling",
+            "3D Object Reconstruction",
+            "Superpixels"
+        ]
+    },
+    "metadata": {
+        "user_id": "fc0179f4-c1d6-4c7a-854d-686de10509fb",
+        "created_at": "2024-12-31T13:26:40.040941",
+        "processing_error": false
+    },
+    "_rid": "zkJSAJUV8huOoxMAAAAAAA==",
+    "_self": "dbs/zkJSAA==/colls/zkJSAJUV8hs=/docs/zkJSAJUV8huOoxMAAAAAAA==/",
+    "_etag": "\"24010122-0000-1600-0000-6773f1100000\"",
+    "_attachments": "attachments/",
+    "_ts": 1735651600
+}
+{
+    "id": "901e34ae-4f31-4b3b-83a3-0412183496e6_chunk_1",
+    "deck_id": "901e34ae-4f31-4b3b-83a3-0412183496e6",
+    "type": "chunk",
+    "chunk_index": 1,
+    "content": {
+        "text": "PAGE_BREAK]\nETH zürich\nSimple Linear Iterative Clustering [SLIC] Algorithm\n· Input parameters\n○ Region Size (RS): the nominal size of the regions (superpixels)\n○ Regularizer (R): the strength of the spatial regularization\n● The image is first divided into a grid with step RS.\n. The center of each grid tile is then used to initialize a corresponding k-means.\n. The acquired k-means centers and clusters are refined by using the k-means Lloyd algorithm.\n. The parameter regularizer sets the trade-off between clustering appearance and spatial regularization, which is obtained by setting\nR RS\nin the definition of the feature w(x,y). 1 =\n● After the k-means step, SLIC optionally removes any segment whose area is smaller than a given threshold by merging them into larger ones.\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 12\n[PAGE_BREAK]\nETHzürich\nResulting Superpixels\nSuperpixels images of different superpixels number Ks and different distance functions\n(a) K = 50 (Euclidean distance), (b) K = 100 (Euclidean distance), (c) K = 200 (Euclidean distance), (d) K = 200 (Mahalanobis distance).\n(a)\n(b)\n(c)\n(d)\nSource: L. Zhang et. al. An improved method for pancreas segmentation using SLIC and interactive region merging\nLIN\nBIOMEDICAL INFORMATICS\n| 13\nGunnar Rätsch | 1.3.2022\n[PAGE_BREAK]\nETH zürich\nImage Segmentation -> Labelling Pixels\n● Labellings highly structured\n· Labels highly correlated with very complex dependencies\n● Independent label estimation too hard\n● It is desired that the whole labelling should be formulated as one optimisation problem.\n· High resolution images:\n○ Hard to train complex dependencies\n○ Optimisation problem is hard to infer\nLIN\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 14\n[PAGE_BREAK]\nETH zürich\nSegmentation as an Energy Minimization Problem\ndata ▪ E assigns non-negative penalties to a pixel location i when assigning a label to this location.\n· E assigns non-negative penalties by comparing the assigned labels at smooth adjacent positions i and j\nThis optimization model is characterized by local interactions along edges between adjacent pixels, and often called MRF (Markov Random Field) model.\nLIN BIOMEDICAL INFORMATICS\n| 15\nGunnar Rätsch | 1.3.2022\n[PAGE_BREAK]\nETHzürich\nMarkov Random Field\n· MRF is a graphical model over an undirected graph (G=(V,E)) positivity property (P(x) > 0) and Markov property.\n○ Set of random variables linked to nodes: {x, E V}\n○ Set of neighbored random variable: N(x) = {x, | j € N}}\n○ Markov property: P(x. | x,\n= P(X. | XN;)\n· Pairwise MRFs:\nP(x) = - exp(-E(x))\nE(x) = DiEV Vi(xi) + LiEVJEN; Vij(Di, Xj)\nLIN BIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022\n| 16\n[PAGE_BREAK]\nETH zürich\nExample: Foreground / Background Estimation\n· X = 0 -> i is in background (to be determined)\n· X. = 1 -> i is in foreground (to be determined)\n· Data term (i=1, ... ,n):\nvi(0) = - log P(x; E BG) vi(1) = - log P(x; E FG)\nProbabilities are estimated using FG / BG colour models (from pretrained model)\n· Smoothness term (i,j=1, ... ,n):\nVij (Xi, Xi) = Kijo(x; + x)\nKij = >1 + 12 exp(-3(Ii - Ij)2)\nIntensity dependent smoothness\n● Looking forx* E {0, 1}\" that minimizes E(x), with fixed\nBIOMEDICAL INFORMATICS\nbackground/foreground labels\nGunnar Rätsch | 1.3.2022 | 17\n[PAGE_BREAK]\nETH zürich\nForeground / Background Estimation\n· x* = argmin, E(x)\n. This optimization problem can be solved by transforming the energy function into a min-cut/max-flow problem and solve it (S=\"F\", T=\"B\")\n. Max-flow min-cut theorem.\nThe maximum value of an S-T flow is equal to the minir capacity over all S-T cuts.\nF\ncut\n. Ford-Fulkerson algorithm to compute the maximum flow\nLIN BIOMEDICAL INFORMATICS\n· Energy optimization equivalent to graph min-cut\n· Cut: remove edges to disconnect F from B\n· Minimum: minimize sum of cut edge weight\n1\nB\nGunnar Rätsch\n| 1.3.2022\n| 18\n[PAGE_BREAK]\nOur Method\nGround Truth\nz=0\nz=5\nz=15\nz=25\nz=35\nz=45\nFigure 3.11. Segmentation result for neuron with ID #39828\n1\n2\n3\n4\n5\n6\n7\n8\n9\nS\nBehrouz Tajoddin, M.Sc. thesis, 2011\n[PAGE_BREAK]\nETH zürich\n[PAGE_BREAK]\nTopic 2: Image Classification\nפרטים\nמחירון\nמבצעים\nCaltech 101 dataset Fei Fei et al., 2004\nGunnar Rätsch | 1.3.2022\nLIN BIOMEDICAL INFORMATICS\n| 21\n[PAGE_BREAK]\nETH zürich\nNeural Networks for image analysis\nNeuron\n· activation (weighted sum of inputs+bias)\nm\nWkiXi + bk\ni=1\n· activation function q\nX2\n· usually non-linear\nInput signals\n. e.g. tanh, sigmoid and ReLU\n▪ output\nyk = 4(uk)\n->\nWKI\nWK2\nSynaptic weights\nx,\nWkm\nSumming junction\nuk\nΣ\n6(.)\nOutput yk\nActivation function\nBias\nbk\nBIOMEDICAL INFORMATICS\nFonseca DJ et al\nGunnar Rätsch | 1.3.2022 | 22\n[",
+        "summary": "The text discusses various methods and algorithms for image segmentation, focusing on the Simple Linear Iterative Clustering (SLIC) algorithm and its application in biomedical informatics. It highlights the input parameters, the k-means clustering process, and the subsequent optimization problems involved in labeling pixels. Additionally, it covers the Markov Random Field (MRF) model for image segmentation and the energy minimization approach for foreground/background estimation.",
+        "main_topic": "Image Segmentation and Analysis",
+        "subtopics": [
+            "Simple Linear Iterative Clustering (SLIC) Algorithm",
+            "Input Parameters for SLIC",
+            "Superpixels Generation",
+            "Labelling Pixels",
+            "Segmentation as Energy Minimization",
+            "Markov Random Field (MRF)",
+            "Foreground/Background Estimation",
+            "Neural Networks for Image Analysis"
+        ]
+    },
+    "metadata": {
+        "user_id": "fc0179f4-c1d6-4c7a-854d-686de10509fb",
+        "created_at": "2024-12-31T13:26:40.081180",
+        "processing_error": false
+    },
+    "_rid": "zkJSAJUV8huPoxMAAAAAAA==",
+    "_self": "dbs/zkJSAA==/colls/zkJSAJUV8hs=/docs/zkJSAJUV8huPoxMAAAAAAA==/",
+    "_etag": "\"24010222-0000-1600-0000-6773f1100000\"",
+    "_attachments": "attachments/",
+    "_ts": 1735651600
+}
+{
+    "id": "901e34ae-4f31-4b3b-83a3-0412183496e6_chunk_2",
+    "deck_id": "901e34ae-4f31-4b3b-83a3-0412183496e6",
+    "type": "chunk",
+    "chunk_index": 2,
+    "content": {
+        "text": "PAGE_BREAK]\nETH zürich\nNeural Networks\nHidden Layers\nRegular Neural Networks\n· one input layer\n· multiple hidden layers\n. the more layers, the deeper the model\n· # neurons at each hidden layer can be different\nInputs\n... Ouputs\none output layer\n...\nOne connection = one parameter\nFully-connected NNs have a huge number of parameters. E.g., For input images with size 200x200x3, a fully-connected neuron in the first layer has 200x200×3=120,000 weights.\nNeto LB et al\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 23\n[PAGE_BREAK]\nETH zürich\nDrawbacks of regular neural networks\n· Huge number of parameters\n· do not scale well to large images\n· computationally heavy\n· local minima during training\n· overfitting\n. Make no assumption on the locality of pixel dependencies\n· the nature of image: neighboring pixels have higher dependencies than pixels far away\n· regular neural networks are unable to extract local features using only global weighted sum => Convolutions to build-in \"locality\"\nLIN\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 24\n[PAGE_BREAK]\nETH zürich\nHow do convolutions work?\nConvolutional layers\n▪ consist of a set of small-size filters\n· extract local features from the input layer, or outputs from the previous layer\n0111000\nX1\n001\n1100\nX1\n000 1110 10|1\n00011.0 0\n010\n0011000\n101\n0110000\n1100000\nI\nK\nFilter\nLIN\nImage\n14341\n12433\n=\n12341\n1\n3 3 1 1\n33110\nI * K\nPetar Veličković, Cambridge Spark\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 25\n[PAGE_BREAK]\nETH zürich\nConvolutional Filter Examples I\nSmoothing filter\nF[x, y]\n0 0\n0\n0 0\n0\n0\nO\no 0 0\n0 0 0 0 0\nG[x, y]\n0\n30 10 20\n·1 .1\n·1\n.1\n=\n1\n.1 .1\n9\n.1 .1 .1\n0\n0\n90 90\n90\n90 | 90 O\nOriginal\n0 0 0\n90 90 90\n90\n90 0 0\n0 O\n90 90 90\n90\n90\n0 0\nNote the edge artifact .*\nBlur (with a box filter)\n0 0\n0\n90 0 90\n90\n90\n0 0\n0\n0\n90\n90 90\n90\n90\n0 0\n0 0\n0\nO 0 0\n0\n0\n0\nO\n0 0\n90\nC 0 0 0\n0\n0\nIdentity filter\n0\nC\n0 0 0 0 C\n0\n·0\n.0\n.0\n·0\n·1 .0\n=\n·0\n·0\n.0\nOriginal\nFiltered (no change)\nNote the edge artifact .*\n\"2D Convolution\"\nBIOMEDICAL INFORMATICS\nHundreds of other filters that have been developed of the last decades for specific needs, including denoising, sharpening etc.\n|\n| 26\n[PAGE_BREAK]\nETH zürich\nConvolutional Filter Examples II\nExamples of commonly used filters in image processing\nOriginal image\n[0 0 -1]\nRobert Cross\n0 1\n0\n0 0\n0\n[1\n1\nPrewitt\n1 0\n3\n1 0\n0\n-17\n-1\n-1\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 27\n[PAGE_BREAK]\nETH zürich\nConvolutional Filter Examples III\nExamples of commonly used filters in image processing\nOriginal image\nLoG filtering\n00 -100\n0\n-1 -2\n-1\n0\n-1\n-2 16 -2\n-1\n0\n-1\n-2 -1 0\n0 0\n-1\n0 0\nLaplacian of Gaussian (LoG)\nBIOMEDICAL INFORMATICS\nThe filter parameters in convolutional neural networks are learned not pre-defined.\nGunnar Rätsch | 1.3.2022 | 28\n[PAGE_BREAK]\nETH zürich\nConvolutional Layers\nImages:| multiple channels (e.g. 3 color channels, RGB) Define window size, e.g. 3 x 3, 5 x 5, ... = input dimensionality\nChose number of channels k = layer width Kernel weights = parameters\n0i,(§x,§y,j), i=1, ... , k, j = 1, 2, 3, 8x, dy E {. . . , -1, 0, 1, . . . }\nFeature map = feature function applied to shifted signal = k -vector associated with every grid point (x, y)\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 29\n[PAGE_BREAK]\nETH zürich\nCNN: Single Image Channel\nLIN\nSource pixel\n0 0 0 0\n000\n1\n1\n1\n1\n1\n1\n2\n0\n1\n0\n2\n2\n0\n1\n2\n1\n0\n2\n2\n0\n400\n1\n2\n0\n1 0\n1 1\n0 1 1\n0\n0 -4\n0\n1\n1\n0 0\n1\n0\n-8\n0 0 1\nConvolution kernel (emboss)\nNew pixel value (destination pixel)\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 30\n[PAGE_BREAK]\nETH zürich\nConvolution details\n+- depth ->\n- k-\nR\n+- height->\nG\nB\n‹- width ->\nReLU CNN layer map\nLIN BIOMEDICAL INFORMATICS\nZi, (u,v) = j=1 du, dv\n3-tensor\nn\nΣ Σ Θi,j, (δα,δυ) *j, (u+δα, υ+δυ)\n4-tensor\n3-tensor\n+\nGunnar Rätsch | 1.3.2022 | 31\n[",
+        "summary": "This content could not be processed due to content filtering or other restrictions. Original length: 3784 characters.",
+        "main_topic": "Content Processing Error",
+        "subtopics": [
+            "Error Processing Content"
+        ]
+    },
+    "metadata": {
+        "user_id": "fc0179f4-c1d6-4c7a-854d-686de10509fb",
+        "created_at": "2024-12-31T13:26:40.088121",
+        "processing_error": true
+    },
+    "_rid": "zkJSAJUV8huQoxMAAAAAAA==",
+    "_self": "dbs/zkJSAA==/colls/zkJSAJUV8hs=/docs/zkJSAJUV8huQoxMAAAAAAA==/",
+    "_etag": "\"24010322-0000-1600-0000-6773f1100000\"",
+    "_attachments": "attachments/",
+    "_ts": 1735651600
+}
+{
+    "id": "901e34ae-4f31-4b3b-83a3-0412183496e6_chunk_3",
+    "deck_id": "901e34ae-4f31-4b3b-83a3-0412183496e6",
+    "type": "chunk",
+    "chunk_index": 3,
+    "content": {
+        "text": "PAGE_BREAK]\nETH zürich\nConvolutional neural networks\nINPUT 32×32\nC1: feature maps 6@28x28\nC3: f. maps 16@10x10\nS4: f. maps 16@5x5\nS2: f. maps 6@14x14\nC5: layer 120\n84\nF6: layer OUTPUT 10\nConvolutions\nSubsampling (pooling)\nConvolutions\nFull connection\nGaussian connections\nSubsampling\nFull connection\nLeNet-5, Yann LeCun et al\nThree main types of layers\n· Convolutional layers (here, 1st convolutional layer has 6 filters)\n· Pooling layers, also called subsampling layers\n· Fully-connected layers\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 32\n[PAGE_BREAK]\nETH zürich\nConvolutional Neural Networks\nPooling layers\n· downsample the representation size from previous layer\n. reduce the number of parameters\n· control overfitting\n1\n0\n2\n3\nTypes of pooling\ny 1\n4 6\n6\n8\n\" max pooling (most commonly used)\n3\n1\n1\n0\n· average pooling\n1\n2\n2 4\n· L2-norm pooling\nx\nmax pooling\n6\n8\n3\n4\naverage pooling\n2.75 4.75\n1.75 1.75\nL2-norm pooling\n7.3\n10.6\n3.9\n4.6\nLIN BIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 33\n[PAGE_BREAK]\nETH zürich\nConvolutional neural networks\nFully-connected layers\n. have full connections to all outputs from the previous layer\n· are usually used as the last layer(s) of CNNs\nInput image 60x60x16\nCI 10@ 5×5\n56×56×10\nS2\n2×2\n28×28×10\nC3\n5@ 3×3 2×2\n26×26×5\nS4\n13×13×5\nF5\n3@ 13×13×5\n1×1×3\nBH\nIN\n0 Ca\nMax-pooling Convolution\nFully-connected\nMax-pooling\nConvolution\nHaj-Hassan H et al\n5\n5\n11\n48\n55\nw\n13\n27 128\n5\n224\n5\n3\n27\n11\n3\n155\n11\n224\nStride\nof 4\n3\nMax pooling\n48\n13\n128\nMax pooling\nLIN\n3\n192\n3\n3\n128\n192\n13\n2048\n2048\ndense\n13\n3\n3\n192\n13.200\n13\ndense\ndense\n1000\n192\n128 Max pooling\n2048\n2048\nBIOMEDICAL INFORMATICS\nKrizhevsky A. et al\nGunnar Rätsch | 1.3.2022 | 34\n[PAGE_BREAK]\nETH zürich\nCNN Vision Architecture\nTypical CNN architecture for computer vision pyramidal structure. Depth, lower resolution, many filters and fully connected at the end.\nAlexNet (2012)\nInput data\nConv1\nConv2\nConv3\nConv4\nConv5\nFC6 FC7 FC8\n27× 27 × 256\n13× 13 x 384\n13× 13×384\n13× 13×256\n227× 227 × 3\n55× 55 × 96\n4096\n1000 4096\nLIN BIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 35\n[PAGE_BREAK]\nETH zürich\nVisual Feature Hierarchy\nLayer 1\nLayer 2\nConvolutional Layer 2\noriginal image\nZeiler MD et al\nLIN\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 36\n[PAGE_BREAK]\nETHzürich\nVisual Feature Hierarchy\nSTE\nCORN\nLayer 3\nCOSTA\n17\nPER\nLIN BIOMEDICAL INFORMATICS\nConvolutional Layer 3\noriginal image\nZeiler MD et al\nGunnar Rätsch | 1.3.2022 | 37\n[PAGE_BREAK]\nETH zürich\nAdvantages of convolutional neural networks\nParameter sharing in the convolutional layers\n. reduce the amount of parameter and computation\n· control overfitting\n. Encode the spatial dependencies at different levels\n▪ able to extract local features from the lower layers\nand more abstract and global features on top of the local ones\n. Excellent performance on image classification tasks\nLIN\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 38\n[PAGE_BREAK]\nETH zürich\nHow to train convolutional neural networks?\nParameters (excluding hyperparameters & architecture choices)\n· filters in the convolutional layers\n· weights in the fully-connected layers\n· (The pooling layers are non-parametric)\n· Input\n· as much data as possible\n· data augmentation: translation, rotation, scaling and random crop\n· Depth\n. the more layers, the deeper the model, the better\n· Challenges\n\" long training time even with much fewer parameters than regular NNs\n· overfitting caused by the large number parameters in the fully-connected layers (a common technique used to control overfitting: dropout)\n· GPUs make convolutional models feasible\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 39\n[PAGE_BREAK]\nETH zürich\nCommon pre-trained networks\n● LeNet\n· VGGNet\n· ResNet\n· YOLO\nTypical approach: Pretraining on very large datasets, then fine-tuning on application- specific datasets\nLIN\nClassical CNN topology - VGGNet (2013)\nD=64\nPool\nConvNet\nD=128\nD=256\nD=512\nD=512\nFinetune this\nD=4096\nD=4096\nD=1000\n224x224 112x112\n56×56\n2B×28\n14x14\nFC\nFC\nFC + Softmax\nBIOMEDICAL INFORMATICS\nReuse this\nGunnar Rätsch | 1.3.2022 | 40\n[",
+        "summary": "The text discusses Convolutional Neural Networks (CNNs), covering their architecture, types of layers, advantages, training methods, and common pre-trained models. It highlights the structure of CNNs, including convolutional, pooling, and fully-connected layers, along with their roles in image classification tasks.",
+        "main_topic": "Convolutional Neural Networks",
+        "subtopics": [
+            "Types of Layers",
+            "Pooling Layers",
+            "Fully-Connected Layers",
+            "Typical CNN Architecture",
+            "Visual Feature Hierarchy",
+            "Advantages of CNNs",
+            "Training CNNs",
+            "Common Pre-Trained Networks"
+        ]
+    },
+    "metadata": {
+        "user_id": "fc0179f4-c1d6-4c7a-854d-686de10509fb",
+        "created_at": "2024-12-31T13:26:40.098807",
+        "processing_error": false
+    },
+    "_rid": "zkJSAJUV8huRoxMAAAAAAA==",
+    "_self": "dbs/zkJSAA==/colls/zkJSAJUV8hs=/docs/zkJSAJUV8huRoxMAAAAAAA==/",
+    "_etag": "\"24010422-0000-1600-0000-6773f1100000\"",
+    "_attachments": "attachments/",
+    "_ts": 1735651600
+}
+{
+    "id": "901e34ae-4f31-4b3b-83a3-0412183496e6_chunk_4",
+    "deck_id": "901e34ae-4f31-4b3b-83a3-0412183496e6",
+    "type": "chunk",
+    "chunk_index": 4,
+    "content": {
+        "text": "PAGE_BREAK]\nETH zürich\nImage segmentation with U-nets\n1 64 64\n128 64 64 2\ninput image tile\noutput segmentation\nmap\n392 x 392\n390 x 390\n388 x 388\n388 × 388\n572 × 572\n570 x 570\n568 × 568\n128 128\n256 128\n2002\n2842 2822\n2802\n1982\n1962\n256 256\n512 256\n1402\n1042\n1382\n1362\n1022\n1002\n512\n512\n1024\n512\n682\n562\nconv 3x3, ReLU >copy and crop\n662\nhttps://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/\n322 6427\n1024\n542\n5227\n302\n282\n+ max pool 2x2\n+ up-conv 2x2 -> conv 1x1\nBIOMEDICAL INFORMATICS\n|\n| 41\n[PAGE_BREAK]\nETH zürich\nTake Home Messages\n● Superpixels can reduce resolution without much loss of key image elements\n· Image segmentation is very useful, but non-trivial to get right\no Markov Random Fields\n. Traditional neural networks often don't work well on images due to overfitting\n· Image filters are very useful & powerful\n· Convolutional Neural Networks\no Build on filters -> we can learn them\n○ deal with large-scale image inputs\n. Parameter-sharing in convolutional layers helps reducing overfitting\n. Pooling layers aggregate information to lower resolutions\n· Training takes long and can be parallelized (GPUs!) | . Convolutional and pooling layers learn feature extractors that are the input the the final fully connected layers\nBIOMEDICAL INFORMATICS\n| 42\n[PAGE_BREAK]\nETHzürich\nCancer Diagnosis Workflow\nScreening\nTriaging\nRadiology (X-Ray\nCT\nPET\n... )\nSurgeon\nMargin Status\nSurgical Pathology\nDiagnosis\nOncologist\nLIN\nStaging\nMolecular Pathology\nGenomics\nI\n1\n1\n1\nTreatment\n1\nBIOMEDICAL INFORMATICS\nSlides on Digital Pathology are courtesy of Gabriele Campanella and Thomas Fuchs.\n[PAGE_BREAK]\nETH zürich\nPathology Workflow\nBiopsy\nCheck-in\nGrossing\nProcessing\nSlide Analysis\nDiagnostic Reporting\nEmbedding Cutting Staining\nSlide Preparation\nLIN BIOMEDICAL INFORMATICS\n|\n[PAGE_BREAK]\nETH zürich\nFrom Pathology to Digital Pathology\n· From glass slides to digital slides\n▪ Better retrieval and sharing\n. Opinion from other experts\n· Opened doors for machine learning researchers\n· Idea is not to replace pathologists but to make their life easier\n. Automating redundant time consuming tasks\n· Discovery of novel biomarkers\nIIIIII -ANDOR !!!!!!!\n0\nAPERIO VERSA &\nLIN\nBIOMEDICAL INFORMATICS\n|\n|\nSource: https://www.leicabiosystems.com/\n[PAGE_BREAK]\nETH zürich\nPathology to digital pathology\n▪ H&E images: thin tissue sections\n(3-5 um)\n· Hematoxylin and eosin staining\n· Purple staining of nucleus\n. Pink staining of stroma and membrane\n▪ Access to different resolutions -- like in a microscope\n· Image in highest resolution ~100kx100k pixels\nImage A\nMulti-frame Image B\n28,649 px\nMulti-frame Image C\n63,744 px\n3,000 px\n1,200 px\n300 px\nImage Pyramid Whole slide image (WSI): Pyramidal image\nDICOM Objects\nLIN\nBruce A. Beckwith, Digital Pathology, 2016. pp 87-97 James Cuff, https://www.nextplatform.com/, 2018\nBIOMEDICAL INFORMATICS\n|\n|\n[PAGE_BREAK]\nETHzürich\n\"Tasks at hand\" for a pathologist\n▪ Bottom up: Prostate adenocarcinoma\n▪ Cells: cell detection, cell typing\n· Nuclear features predictive of survival, grading of cancer\n▪ Example: counting mitotic cells\n. Glands: detection, segmentation\n. Shape and structure of glands important morphological featur\n· Example for prostate cancer diagnosis\n· Tissue: grading, tumor detection\n· Eg. gleason score grading of prostate cancer tissue\nGleason's Pattern\n1. Small, uniform glands\n2. More stroma between glands\n3. Distinctly infiltrative margins\n4. Irregular masses of neoplastic glands\n5. Only occasional gland formation\nSource: wikipedia\nWell differentiated\nModerately differentiated\nPoorly differentiated /Anaplastic\n|\nLIN BIOMEDICAL INFORMATICS\n|\n[PAGE_BREAK]\nETH zürich Image Data\nDeep Learning for Identifying Metastatic Breast Cancer Harvard, MIT (2016)\nDetecting Cancer Metastases on Gigapixel Pathology Images Google (2017)\nClassification and mutation prediction from non-small cell lung cancer histopathology images using deep learning NYU (2018)\nPan-cancer computational histopathology reveals mutations, tumor composition and prognosis EMBL (2019)\nDIVIVIEDICAL INFORMATICS\n400 Camelyon\n400 Camelyon\n1,600 TCGA\n9,754 TCGA\n|\n|\n[PAGE_BREAK]\nETH zürich\nLarge Image Data\n470 Whole-Slide Images\nImageNet 14M images\n≈\n|\nLIN BIOMEDICAL INFORMATICS\n|\n[PAGE_BREAK]\nETH zürich\nExpert Annotations\n|\nLIN BIOMEDICAL INFORMATICS\n|\n[PAGE_BREAK]\nETHzürich\nGoal: Clinical-grade Decision Support\nBIOMEDICAL INFORMATICS\nGiven a WSI, return: · Score representing tumor probability · Highlight lesion location\n|\nCampanella et al., Nature Medicine, 2019 https://www.nature.com/articles/s41591-019-0508-1\n[PAGE_BREAK]\nETH zürich\nClinical-grade Decision Support\n1. Proposed a method that does not require manual annotations\n2. Use datasets much larger than previous studies\n3. Learn from the full wealth of biological and technical variability\n4. No data curation is necessary\n5. Better generalization to real data in pathology practice\n6. Defined clinical relevance for computational pathology\n7. Proposed a strategy to integrate this system in the clinical workflow\nINFORMATICS BIOMEDICAL\nCampanella et al., Nature Medicine, 2019\n[PAGE_BREAK]\nETH zürich\nClinical-grade Decision Support\n1. Proposed a method that does not require manual annotations\nAt least one tile is positive\nPositive Slide\n…\nAll tiles are negative\nNegative Slide\n…\nMultiple Instance Learning Dietterich et al. 1997\nLIN BIOMEDICAL INFORMATICS\n|\n|\nCampanella et al., Nature Medicine, 2019\n[",
+        "summary": "This content could not be processed due to content filtering or other restrictions. Original length: 5409 characters.",
+        "main_topic": "Content Processing Error",
+        "subtopics": [
+            "Error Processing Content"
+        ]
+    },
+    "metadata": {
+        "user_id": "fc0179f4-c1d6-4c7a-854d-686de10509fb",
+        "created_at": "2024-12-31T13:26:40.106397",
+        "processing_error": true
+    },
+    "_rid": "zkJSAJUV8huSoxMAAAAAAA==",
+    "_self": "dbs/zkJSAA==/colls/zkJSAJUV8hs=/docs/zkJSAJUV8huSoxMAAAAAAA==/",
+    "_etag": "\"24010522-0000-1600-0000-6773f1100000\"",
+    "_attachments": "attachments/",
+    "_ts": 1735651600
+}
+{
+    "id": "901e34ae-4f31-4b3b-83a3-0412183496e6_chunk_5",
+    "deck_id": "901e34ae-4f31-4b3b-83a3-0412183496e6",
+    "type": "chunk",
+    "chunk_index": 5,
+    "content": {
+        "text": "PAGE_BREAK]\nETH zürich\nClinical-grade Decision Support\n1. Proposed a method that does not require manual annotations\nInstances\nTile Probability\nRanked Tiles\nClassifier\n...\n...\n…\nBIOMEDICAL INFORMATICS\n|\n|\nCampanella et al., Nature Medicine, 2019\n[PAGE_BREAK]\nETH zürich\nClinical-grade Decision Support\n1. Proposed a method that does not require manual annotations\nTop-1 Tiles\nSlide Targets\n1\nModel Optimization\n1\n0\n…\n…\n0\nBIOMEDICAL INFORMATICS\n|\n|\nCampanella et al., Nature Medicine, 2019\n[PAGE_BREAK]\nETH zürich\nClinical-grade Decision Support\n1. Proposed a method that does not require manual annotations\nEvaluation\nLearning\n105 x\nin 1 - 4 weeks\nLIN BIOMEDICAL INFORMATICS\nCampanella et al., Nature Medicine, 2019\n[PAGE_BREAK]\nETH zürich\nClinical-grade Decision Support\n2. Use datasets much larger than previous studies\nTerapixels\n1.9Tp 400 slides\nCAMELYON16\n2.5Tp\nIMAGENET\n58Tp 12,160 slides 2016 sign-outs @MSK\nProstate In-house\n1884\n|\n|\nCampanella et al., Nature Medicine, 2019\nLIN BIOMEDICAL INFORMATICS\n[PAGE_BREAK]\nETHzürich\nClinical-grade Decision Support\n5. Better generalization to real data in pathology practice\nProstate\n1.00\n20x\n0.75\n10x\nSensitivity\n0.50\nScale\nEnsemble (AUC: 0.989)\n0.25\n20x (AUC: 0.986)\n10x (AUC: 0.983)\n5x\n0.00\n5x (AUC: 0.974)\nLIN BIOMEDICAL INFORMATICS\n1.00\n0.75\n0.50 Specificity\n0.25\n0.00\n|\n|\n[PAGE_BREAK]\nETHzürich\nClinical-grade Decision Support\n6. Defined clinical relevance for computational pathology\nMelanoma: 111 dermoscopy images\n1\n-\nSpecificity\n- Algorithm: AUC = 0.91\n· Dermatologists (21)\n· Average dermatologist\n0\n0\n1\nSensitivity\n|\n|\nBluastava et al. 2017 INFORMATICS\n[PAGE_BREAK]\nETHzürich\nClinical-grade Decision Support\n6. Defined clinical relevance for computational pathology\n1.00\n0.75\nSensitivity\n0.50\n0.25\nPositive\nSlides\n0.00\n0\n25\n50\n75\n100\nBIOMEDICAL INFORMATICS\n% Slides Reviewed\n|\n|\n[PAGE_BREAK]\nETHzürich\nClinical-grade Decision Support\n7. Proposed a strategy to integrate this system in the clinical workflow\nProbability\nLIN\n|\nBIOMEDICAL INFORMATICS\n|\n[PAGE_BREAK]\nETHzürich\nClinical-grade Decision Support\n7. Proposed a strategy to integrate this system in the clinical workflow\n|\nBIOMEDICAL INFORMATICS\n|\n[PAGE_BREAK]\nETHzürich\nClinical-grade Decision Support\n7. Proposed a strategy to integrate this system in the clinical workflow\n1.00\n0.75\nSensitivity\n0.50\n0.25\nPredicted Positive\nPredicted\nNegative\n0.00\n1.00\n0.75\nProbability\n0.50\n0.25\n0.00\n0\n25\n50\n% Slides Reviewed\n75\n100\nDecrease workload by 75%\n|\n|\n[PAGE_BREAK]\nETH zürich\nSummary Computational Pathology\n· Computational Pathology is data rich\n· Prime example of using deep learning on medical images\n· Proposed approach leveraged weak labeling of images\n· Takes advantage of vast image archives at a large cancer hospital\n. Proposed innovative ways to use methodology in clinical workflow\nLIN\nBIOMEDICAL INFORMATICS\nGunnar Rätsch | 1.3.2022 | 64\n[PAGE_BREAK]\nETHzürich\nSolving \"Tasks at hand\" using ML\n▪ Cell detection and classification: HoVer-Net:\n. Why: nuclear features predictive of survival, grading of cancer\nNuclear Pixels Prediction\nPost Processing\n(a)\nHoVer Net\nMarker Controlled\nWatershed\n00\nD.\nInput Image\nHorizontal and Vertical Map Predictions\nHorizontal and Vertical Gradient Maps\nEnergy Landscape and Instance Markers\nInstance Segmentation\nBlue: epithelial cells Red: inflammatory cells Green: spindle-shaped cells Cyan: miscellaneous cells\nNuclear Type Prediction\n(b)\nInstance Segmentation and Classification\nGraham, Simon, et al. \"Hover-net: Simultaneous segmentation and classification of nuclei in multi-tissue histology images.\" Medical Image Analysis 58 (2019): 101563.\nBIOMEDICAL INFORMATICS\nHoVer-Net pipeline\n|\n|",
+        "summary": "The document discusses advancements in clinical-grade decision support systems in computational pathology, emphasizing methods that require no manual annotations and leverage large datasets for better generalization in real data. It outlines the integration of these systems into clinical workflows and the use of deep learning for tasks such as cell detection and classification.",
+        "main_topic": "Clinical-Grade Decision Support in Computational Pathology",
+        "subtopics": [
+            "Method without manual annotations",
+            "Use of large datasets",
+            "Generalization in pathology practice",
+            "Clinical relevance in computational pathology",
+            "Integration into clinical workflow",
+            "Application of deep learning in medical images",
+            "Cell detection and classification using HoVer-Net"
+        ]
+    },
+    "metadata": {
+        "user_id": "fc0179f4-c1d6-4c7a-854d-686de10509fb",
+        "created_at": "2024-12-31T13:26:40.115074",
+        "processing_error": false
+    },
+    "_rid": "zkJSAJUV8huToxMAAAAAAA==",
+    "_self": "dbs/zkJSAA==/colls/zkJSAJUV8hs=/docs/zkJSAJUV8huToxMAAAAAAA==/",
+    "_etag": "\"24010622-0000-1600-0000-6773f1100000\"",
+    "_attachments": "attachments/",
+    "_ts": 1735651600
+}
+{
+    "id": "901e34ae-4f31-4b3b-83a3-0412183496e6_summary",
+    "deck_id": "901e34ae-4f31-4b3b-83a3-0412183496e6",
+    "type": "document_summary",
+    "content": "The document provides an overview of image analysis techniques in healthcare, focusing on machine learning applications such as image segmentation and the use of Convolutional Neural Networks (CNNs). It also discusses advancements in clinical decision support systems that utilize deep learning for improved accuracy in computational pathology.",
+    "main_topics": [
+        "Basics of medical image analysis",
+        "Image segmentation methods including SLIC and MRF",
+        "Convolutional Neural Networks (CNNs) architecture and applications",
+        "Advancements in clinical-grade decision support systems",
+        "Integration of deep learning in computational pathology"
+    ],
+    "metadata": {
+        "user_id": "fc0179f4-c1d6-4c7a-854d-686de10509fb",
+        "created_at": "2024-12-31T13:26:40.040904",
+        "failed_chunks": [
+            2,
+            4
+        ],
+        "total_chunks": 6,
+        "successful_chunks": 4
+    },
+    "_rid": "zkJSAJUV8huUoxMAAAAAAA==",
+    "_self": "dbs/zkJSAA==/colls/zkJSAJUV8hs=/docs/zkJSAJUV8huUoxMAAAAAAA==/",
+    "_etag": "\"24010022-0000-1600-0000-6773f1100000\"",
+    "_attachments": "attachments/",
+    "_ts": 1735651600
+}

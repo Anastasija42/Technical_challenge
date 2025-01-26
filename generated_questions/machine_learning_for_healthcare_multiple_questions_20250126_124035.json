@@ -1,0 +1,109 @@
+[
+    [
+        {
+            "question": "A lecture on machine learning for healthcare focuses on medical image analysis.  The lecture covers various segmentation techniques and introduces the concept of superpixels, which are described as visually homogeneous image regions created by partitioning an image into 'N' regions.  Which of the following best describes a key characteristic of superpixels, as presented in this lecture?",
+            "correct_answer": "Superpixels provide a perceptually meaningful representation by grouping pixels with similar low-level properties.",
+            "correct_explanation": "This option is correct.  The lecture materials define superpixels as \"visually homogeneous regions...where the pixels within a region share some low-level property (color, texture etc.)\". This directly supports the idea of perceptually meaningful representation.",
+            "distractor1": "Superpixels are computationally expensive, significantly increasing the complexity of image processing.",
+            "distractor1_explanation": "This option is incorrect. The provided text explicitly states that superpixels are computationally *efficient*, reducing the complexity of images.  They reduce the number of processing units from hundreds of thousands (or millions) of pixels to only a few hundred (or thousand) superpixels.",
+            "distractor2": "Superpixels inherently lose significant image detail, resulting in substantial information loss.",
+            "distractor2_explanation": "This option is incorrect. The lecture notes highlight that superpixels are \"near-complete,\" meaning there's minimal information loss when moving from a pixel-grid to a superpixel map. Most image structures are conserved.",
+            "distractor3": "Superpixels are primarily useful for high-resolution images, and their effectiveness decreases with lower resolutions.",
+            "distractor3_explanation": "This option is incorrect. The lecture does not limit the application of superpixels to high-resolution images only. The applicability of superpixels is related to the need for efficient image processing across various image resolutions and data types.  The lecture mentions the use of superpixels in both high and low-resolution images.",
+            "index": 0
+        }
+    ],
+    [
+        {
+            "question": "The Simple Linear Iterative Clustering (SLIC) algorithm uses two main input parameters to generate superpixels. One parameter sets the nominal size of the superpixels, and another parameter controls the balance between clustering appearance and spatial regularization.  What is the parameter that regulates the balance between these two aspects, and how is it defined in relation to the nominal size of the superpixels?",
+            "correct_answer": "Regularizer (R); it is defined as the ratio of the Region Size (RS) to 1.",
+            "correct_explanation": "Correct. The text explicitly states that the regularizer (R) sets the trade-off between clustering appearance and spatial regularization and that this is achieved by setting R/RS = 1.  This means R is defined as being equal to RS.",
+            "distractor1": "Region Size (RS); it is defined as the square root of the Regularizer (R).",
+            "distractor1_explanation": "Incorrect. While RS is an input parameter, it defines the size of superpixels, not the balance between appearance and spatial regularization.  The definition of RS in the square root of R is not supported by the text.",
+            "distractor2": "Regularizer (R); it is defined as the ratio of the Region Size (RS) to the number of superpixels (K).",
+            "distractor2_explanation": "Incorrect.  Although R is the parameter that controls the balance, it is not defined as a ratio involving the number of superpixels (K). The number of superpixels is determined by the algorithm, not a direct input parameter in its basic form.",
+            "distractor3": "Region Size (RS); it is defined as the product of the Regularizer (R) and the number of superpixels (K).",
+            "distractor3_explanation": "Incorrect. This option incorrectly describes the relationship between R and RS and introduces an irrelevant factor (the number of superpixels, K).  There's no mention of this type of relationship in the provided information.",
+            "index": 1
+        },
+        {
+            "question": "The Simple Linear Iterative Clustering (SLIC) algorithm, used for image segmentation, employs a process that begins by dividing an image into a grid.  A key parameter, the Regularizer (R), influences the balance between appearance-based clustering and spatial regularization.  Considering the algorithm's steps, what is the primary role of the Regularizer (R) in the SLIC algorithm?",
+            "correct_answer": "It sets the trade-off between clustering appearance and spatial regularization.",
+            "correct_explanation": "This is correct. The text explicitly states that the regularizer \"sets the trade-off between clustering appearance and spatial regularization.\"  This is its core function within the SLIC algorithm.",
+            "distractor1": "It determines the number of superpixels generated.",
+            "distractor1_explanation": "This is incorrect. While the number of superpixels is indirectly influenced by parameters like Region Size (RS), the regularizer's primary function is not directly determining this number.",
+            "distractor2": "It defines the threshold for removing small segments after k-means clustering.",
+            "distractor2_explanation": "This is incorrect.  While the algorithm does have a step that removes small segments, this threshold is not directly set by the regularizer.  This is a separate step in the process.",
+            "distractor3": "It specifies the distance function used in the k-means clustering process (e.g., Euclidean or Mahalanobis).",
+            "distractor3_explanation": "This is incorrect.  The distance function used in the k-means process (Euclidean, Mahalanobis, etc.) is a separate input parameter, not the primary function of the regularizer.",
+            "index": 1
+        }
+    ],
+    [],
+    [
+        {
+            "question": "Convolutional Neural Networks (CNNs) consist of several layer types.  One layer type downsamples the representation size from the previous layer, reduces the number of parameters, and helps control overfitting. Another layer type has full connections to all outputs from the previous layer and is often used as the final layer(s). A third layer type uses filters to extract features from the input. Which of the following correctly matches the layer types with their descriptions?",
+            "correct_answer": "Layer 1: Convolutional layer, Layer 2: Pooling layer, Layer 3: Fully-connected layer",
+            "correct_explanation": "This option correctly identifies the functions of each layer type in a typical CNN architecture. Convolutional layers perform feature extraction, pooling layers downsample and reduce parameters, and fully-connected layers provide full connectivity for classification.",
+            "distractor1": "Layer 1: Fully-connected layer, Layer 2: Pooling layer, Layer 3: Convolutional layer",
+            "distractor1_explanation": "This option incorrectly assigns the functions of the layers. Fully-connected layers do not downsample representations; pooling layers do.  Convolutional layers are the ones that utilize filters for feature extraction.",
+            "distractor2": "Layer 1: Pooling layer, Layer 2: Convolutional layer, Layer 3: Fully-connected layer",
+            "distractor2_explanation": "This option incorrectly places the convolutional layer before the pooling layer, which is not the typical order in CNN architectures.  Pooling layers generally follow convolutional layers to reduce dimensionality.",
+            "distractor3": "Layer 1: Pooling layer, Layer 2: Fully-connected layer, Layer 3: Convolutional layer",
+            "distractor3_explanation": "This option incorrectly places the pooling layer first and fully-connected layer second. This sequence is not standard in typical CNN architectures where convolutional layers usually precede pooling layers.",
+            "index": 3
+        }
+    ],
+    [
+        {
+            "question": "A research project on digital pathology aims to improve cancer diagnosis.  The researchers developed a method that uses whole-slide images (WSIs) and analyzes them to provide a score representing tumor probability and highlight lesion location.  Which of the following is NOT a stated advantage of this new approach?",
+            "correct_answer": "The method perfectly eliminates all data curation needs.",
+            "correct_explanation": "This is incorrect and the correct answer because although the method reduces the need for data curation, the text doesn't claim it eliminates it completely.  Perfect elimination of all data curation needs is too strong a claim and represents a common overstatement of the capabilities of a new method.",
+            "distractor1": "The method does not require manual annotations.",
+            "distractor1_explanation": "This is correct because the text explicitly states that no data curation is necessary as an advantage of the proposed method.  The method does reduce data curation needs to improve generalization.",
+            "distractor2": "The method utilizes datasets significantly larger than those used in previous studies.",
+            "distractor2_explanation": "This is incorrect but relevant because the text does mention the use of substantially larger datasets, which is a stated advantage.  However, the method doesn't eliminate the need for data entirely.",
+            "distractor3": "The method improves generalization to real data in pathology practice.",
+            "distractor3_explanation": "This is incorrect but relevant because the text explicitly mentions improved generalization to real-world data as a positive aspect of the proposed system.  It's an important advantage.",
+            "index": 4
+        }
+    ],
+    [
+        {
+            "question": "A new clinical-grade decision support system for computational pathology was developed.  Which of the following features was NOT a key characteristic of this system as described?",
+            "correct_answer": "The system required manual annotation of images for accurate analysis.",
+            "correct_explanation": "This is incorrect.  This option directly contradicts a central feature highlighted in the provided text: the method's avoidance of manual annotations.",
+            "distractor1": "The system utilized significantly larger datasets compared to previous studies.",
+            "distractor1_explanation": "This is correct.  The text explicitly states that the system proposed a method that *did not* require manual annotations, highlighting this as a key improvement.",
+            "distractor2": "The system successfully integrated into existing clinical workflows, aiming to reduce workload.",
+            "distractor2_explanation": "This is incorrect. The text mentions a proposed strategy to integrate the system into the clinical workflow and shows examples indicating a workload reduction of 75%.  However, this was a feature the system aimed for.  The question asks what wasn't a characteristic.",
+            "distractor3": "The system demonstrated improved generalization to real-world pathology data in practice.",
+            "distractor3_explanation": "This is incorrect. The provided text emphasizes the system's improved generalization to real pathology data as one of its key strengths, showcasing results such as AUC scores in different scenarios.",
+            "index": 5
+        },
+        {
+            "question": "A new clinical-grade decision support system for computational pathology was developed.  Which of the following was NOT a key feature or outcome of this system's development?",
+            "correct_answer": "The system's integration into existing clinical workflows resulted in a 50% reduction in pathologist workload.",
+            "correct_explanation": "This is incorrect. While the system aimed to integrate into clinical workflows and improve efficiency, the provided text states a 75% workload decrease, not 50%.  This is a plausible distractor because it is close to the actual figure and reflects a common goal of such systems.",
+            "distractor1": "The system utilized datasets significantly larger than those used in previous studies.",
+            "distractor1_explanation": "This is correct because the provided text explicitly mentions the use of much larger datasets than previous studies (e.g., \"Use datasets much larger than previous studies\") and the elimination of manual annotation (\"Proposed a method that does not require manual annotations\").  Furthermore, it highlights improved generalization to real data (\"Better generalization to real data in pathology practice\").",
+            "distractor2": "A method was developed that eliminated the need for manual image annotations.",
+            "distractor2_explanation": "This is correct. The text explicitly states that a key feature was the development of a method that did not require manual annotations.",
+            "distractor3": "The system demonstrated improved generalization to real-world pathology data encountered in clinical practice.",
+            "distractor3_explanation": "This is correct. The text explicitly states that the system showed improved generalization to real-world data used in pathology practices (\"Better generalization to real data in pathology practice\").",
+            "index": 5
+        },
+        {
+            "question": "A new clinical-grade decision support system for computational pathology was developed.  This system utilized significantly larger datasets than previous studies, did not require manual annotations, and aimed to improve the integration into existing clinical workflows.  Which of the following best describes a key advantage of using larger datasets in this context?",
+            "correct_answer": "Improved generalization to real-world pathology data.",
+            "correct_explanation": "This is correct. The text explicitly states that the use of larger datasets leads to \"better generalization to real data in pathology practice,\" indicating improved performance and reliability in real-world clinical settings.",
+            "distractor1": "Reduced need for deep learning techniques.",
+            "distractor1_explanation": "This is incorrect. Larger datasets do not inherently reduce the need for deep learning; instead, they often enhance its effectiveness.  The text highlights that deep learning was used but the method does not require manual annotation.",
+            "distractor2": "Simplified the process of manual annotation.",
+            "distractor2_explanation": "This is incorrect. The system's key advantage is the *elimination* of manual annotation, not its simplification.  Larger datasets address a different aspect of the workflow, namely the model's ability to generalize to new data.",
+            "distractor3": "Decreased computational processing time.",
+            "distractor3_explanation": "This is incorrect. While larger datasets might require more processing initially, the ultimate goal is improving accuracy and generalizability, not necessarily reducing processing time per se.  The time investment in training is offset by the enhanced performance in clinical use.",
+            "index": 5
+        }
+    ]
+]
